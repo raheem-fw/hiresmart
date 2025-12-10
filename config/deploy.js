@@ -21,6 +21,9 @@ module.exports = function (deployTarget) {
     ENV['github-pages'] = {
       branch: 'gh-pages',
       gitRemoteUrl: 'https://github.com/raheem-fw/hiresmart.git',
+      commitMessage: 'Deploying to gh-pages',
+      sourceBranch: 'main',
+      distDir: 'dist',
     };
     // configure other plugins for production deploy target here
   }

@@ -13,6 +13,7 @@
   "scripts": {
     "build": "vite build",
     "postbuild": "cp dist/index.html dist/404.html",
+    "deploy": "ember deploy production",
     "format": "prettier . --cache --write",
     "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\" --prefixColors auto",
     "lint:css": "stylelint \"**/*.css\"",
