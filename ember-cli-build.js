@@ -18,5 +18,11 @@ module.exports = async function (defaults) {
     // Add options here
   });
 
-  return compatBuild(app, buildOnce);
+  return compatBuild(app, buildOnce, {
+    packagerOptions: {
+      viteOptions: {
+        base: 'hiresmart/',
+      }
+    }
+  });
 };
