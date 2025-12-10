@@ -5,12 +5,18 @@ import loadInitializers from 'ember-load-initializers';
 import config from 'hr-app/config/environment';
 import { importSync, isDevelopingApp, macroCondition } from '@embroider/macros';
 import setupInspector from '@embroider/legacy-inspector-support/ember-source-4.12';
+import '/app/styles/app.scss';
+import registerSW from './../sw-registration';
 
 if (macroCondition(isDevelopingApp())) {
   importSync('./deprecation-workflow');
 }
 
 export default class App extends Application {
+  constructor() {
+    super(...arguments);
+    registerSW();
+  }
   modulePrefix = config.modulePrefix;
   podModulePrefix = config.podModulePrefix;
   Resolver = Resolver.withModules(compatModules);

@@ -18,6 +18,8 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+    VAPID_PUBLIC_KEY:
+      'BPPhU_8RYw3YAtG9MWUGfULkkFR9dC5INGTLxsZz0FjM3Fdqa1zNKWuAk9lEMaJw78SKg0Tq2Pi5QMeB0zdiAWc',
   };
 
   if (environment === 'development') {
@@ -42,6 +44,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.rootURL = 'hiresmart';
   }
 
   return ENV;
