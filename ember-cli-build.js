@@ -21,7 +21,7 @@ module.exports = async function (defaults) {
   return compatBuild(app, buildOnce, {
     packagerOptions: {
       viteOptions: {
-        base: 'hiresmart/',
+        base: '/hiresmart/',
       }
     }
   });
