@@ -12,4 +12,7 @@ export default defineConfig({
       extensions,
     }),
   ],
+  base: process.env.NODE_ENV === 'production'
+    ? '/<repo-name>/'
+    : '/',
 });
