@@ -1,1 +1,0 @@
-self.addEventListener("push",function(t){const i=t.data.json();t.waitUntil(self.registration.showNotification(i.title,{body:i.body,icon:"/assets/images/teaching-tomster.png",data:i.url||"/"}))}),self.addEventListener("notificationclick",function(t){t.notification.close(),t.waitUntil(clients.openWindow(t.notification.data))});
