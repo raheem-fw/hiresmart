@@ -1,6 +1,5 @@
 import Component from '@glimmer/component';
-import { Button, Dropdown } from 'frontile';
-import { on } from '@ember/modifier';
+import { Dropdown } from 'frontile';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 

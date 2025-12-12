@@ -25,7 +25,7 @@ export default class PushService extends Service {
       applicationServerKey: config.VAPID_PUBLIC_KEY,
     });
 
-    const resp = await fetch('http://localhost:4000/subscribe', {
+    await fetch('http://localhost:4000/subscribe', {
       method: 'POST',
       body: JSON.stringify(subscription),
       headers: { 'Content-Type': 'application/json' },

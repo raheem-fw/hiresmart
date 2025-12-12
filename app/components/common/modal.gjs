@@ -21,8 +21,8 @@ export default class ModalComponent extends Component {
 
   <template>
     {{#if this.isVisible}}
-      <div class="modal-backdrop" {{on "click" this.closeModal}}>
-        <div class="modal-content" {{on "click" this.preventClose}}>
+      <div class="modal-backdrop">
+        <div class="modal-content">
           <div class="modal-header">
             {{yield to="header"}}
             {{#unless (has-block "header")}}

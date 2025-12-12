@@ -1,7 +1,5 @@
 import Component from '@glimmer/component';
 import UserCard from './user-card';
-import { LinkTo } from '@ember/routing';
-import { tracked } from '@glimmer/tracking';
 
 export default class ListUsersComponent extends Component {
   get filteredUsers() {

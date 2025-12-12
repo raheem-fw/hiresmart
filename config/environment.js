@@ -45,8 +45,6 @@ module.exports = function (environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
     ENV.rootURL = '/hiresmart/';
-    // ENV.baseURL = '/hiresmart/';
-    // ENV.locationType = 'hash';
   }
 
   return ENV;

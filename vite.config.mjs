@@ -12,7 +12,13 @@ export default defineConfig({
       extensions,
     }),
   ],
-  base: process.env.NODE_ENV === 'production'
-    ? '/hiresmart/'
-    : '/',
+  base: process.env.NODE_ENV === 'production' ? '/hiresmart/' : '/',
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        sw: 'service-worker.js',
+      },
+    },
+  },
 });

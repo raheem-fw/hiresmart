@@ -1,4 +1,3 @@
-import { LinkTo } from '@ember/routing';
 import { concat } from '@ember/helper';
 import Component from '@glimmer/component';
 import { action } from '@ember/object';

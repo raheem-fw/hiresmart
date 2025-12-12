@@ -6,7 +6,6 @@ import { Drawer, Button, Form, Input } from 'frontile';
 import Changeset from 'ember-changeset';
 import lookupValidator from 'ember-changeset-validations';
 
-import UserForm from '/app/components/users/user-form';
 import UserValidations from '/app/validations/user';
 import { transformDate } from '/app/helpers/utils';
 
@@ -52,7 +51,7 @@ export default class AddOrEditUser extends Component {
       return;
     }
 
-    let finalRecord;
+    // let finalRecord;
 
     try {
       if (this.isNewRecord) {
@@ -63,10 +62,10 @@ export default class AddOrEditUser extends Component {
           values[key] = value;
         });
 
-        finalRecord = this.store.createRecord('user', values);
+        this.store.createRecord('user', values);
       } else {
         await this.changeset.execute();
-        finalRecord = this.args.user;
+        // finalRecord = this.args.user;
       }
 
       this.router.transitionTo('users');

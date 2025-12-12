@@ -1,6 +1,5 @@
 import Component from '@glimmer/component';
 import TitleBar from '/app/components/common/titlebar';
-import { LinkTo } from '@ember/routing';
 import ListUsers from '/app/components/users/list-users';
 import TeamsFilter from '/app/components/users/teams-filter';
 import { tracked } from '@glimmer/tracking';

@@ -14,6 +14,7 @@ export default class UsersRoute extends Route {
       }
       return user;
     } catch (error) {
+      console.error("Error in edit: ", error);
       this.router.transitionTo('users.index');
     }
   }

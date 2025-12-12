@@ -1,5 +1,5 @@
 <template>
-    <div class="card {{@class}}">
-        {{yield}}
-    </div>
+  <div class="card {{@class}}">
+    {{yield}}
+  </div>
 </template>

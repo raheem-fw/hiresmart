@@ -51,8 +51,6 @@ export default class UserForm extends Component {
       return;
     }
 
-    let finalRecord;
-
     try {
       if (this.isNewRecord) {
         const validatedData = this.changeset.changes;
@@ -62,10 +60,9 @@ export default class UserForm extends Component {
           values[key] = value;
         });
 
-        finalRecord = this.store.createRecord('user', values);
+        this.store.createRecord('user', values);
       } else {
         await this.changeset.execute();
-        finalRecord = this.args.user;
       }
 
       this.router.transitionTo('users');

@@ -1,6 +1,6 @@
-const { frontile } = require('@frontile/theme/plugin');
+import { frontile } from '@frontile/theme/plugin';
 
-module.exports = frontile({
+export default frontile({
   defaultTheme: 'light',
   themes: {
     light: {

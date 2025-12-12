@@ -37,7 +37,29 @@ export default [
    * https://eslint.org/docs/latest/use/configure/ignore
    */
   {
-    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+    ignores: [
+      'dist/',
+      'node_modules/',
+      'coverage/',
+      '!**/.*',
+      '.vite',
+      '/vite',
+    ],
+  },
+  {
+    files: ['service-worker.js'],
+    languageOptions: {
+      globals: {
+        self: 'readonly',
+        clients: 'readonly',
+        caches: 'readonly',
+        skipWaiting: 'readonly',
+        addEventListener: 'readonly',
+        fetch: 'readonly',
+        Response: 'readonly',
+        Request: 'readonly',
+      },
+    },
   },
   /**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options

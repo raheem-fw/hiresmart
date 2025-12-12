@@ -1,5 +1,5 @@
 <template>
-    <div class="avatar {{@class}}">
-        {{yield}}
-    </div>
+  <div class="avatar {{@class}}">
+    {{yield}}
+  </div>
 </template>
